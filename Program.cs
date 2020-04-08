@@ -41,6 +41,7 @@ namespace ConsoleApp1
                 var result=con.QueryMultiple("select * from DetailEmployee;select * from student", commandType: CommandType.Text);
                 //detailEmployees = result.Read<DetailEmployee>().ToList();
                 var emp = result.Read<DetailEmployee>();
+                students = result.Read<Student>().ToList();
             }
         }
     }
